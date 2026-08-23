@@ -1,0 +1,18 @@
+# Private planning and AI instruction files
+requirements.md
+DEVELOPMENT-NOTES.md
+
+# Local development artifacts
+.DS_Store
+Thumbs.db
+*.log
+*-preview-*.png
+
+# Editor settings
+.vscode/
+.idea/
+
+# Dependencies and generated output
+node_modules/
+dist/
+

@@ -1,0 +1,13 @@
+{
+  "name": "რესტორანი „კერია“",
+  "short_name": "კერია",
+  "lang": "ka",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f6f0e5",
+  "theme_color": "#15130f",
+  "icons": [
+    {"src": "images/logo/favicon-48x48.png", "sizes": "48x48", "type": "image/png"},
+    {"src": "images/logo/apple-touch-icon.png", "sizes": "180x180", "type": "image/png"}
+  ]
+}
