@@ -18,6 +18,7 @@ Official website designed and developed for Keria Restaurant as a project-based 
 - Reduced-motion and forced-colors support
 - Direct telephone, Facebook, and Google Maps directions links
 - Open Graph metadata and Schema.org `Restaurant` structured data
+- Dedicated social-sharing preview image for Open Graph and X/Twitter cards
 - Sitemap, `robots.txt`, favicon set, and web app manifest
 
 ## Technologies
@@ -37,7 +38,8 @@ keria-restaurant/
 |-- images/
 |   |-- keria-images/
 |   |-- logo/
-|   `-- menu/
+|   |-- menu/
+|   `-- social/
 |-- en/                  # English website and menu fallback
 |-- ru/                  # Russian website and menu fallback
 |-- js/
