@@ -75,6 +75,8 @@ const assetRoot = document.body.dataset.assetRoot || ''
 const header = document.querySelector('[data-header]')
 const navToggle = document.querySelector('.nav-toggle')
 const navigation = document.querySelector('#primary-nav')
+const mobileLanguage = document.querySelector('.mobile-language')
+const mobileLanguageSummary = mobileLanguage?.querySelector('summary')
 const navLinks = [...document.querySelectorAll('.primary-nav a')]
 const sectionNavLinks = navLinks.filter(link => link.hash)
 const openButton = document.querySelector('[data-menu-open]')
@@ -108,6 +110,7 @@ function toggleNavigation() {
   if (!navigation || !navToggle) return
 
   const isOpening = !navigation.classList.contains('is-open')
+  if (isOpening && mobileLanguage) mobileLanguage.open = false
   navigation.classList.toggle('is-open', isOpening)
   header?.classList.toggle('menu-open', isOpening)
   navToggle.setAttribute('aria-expanded', String(isOpening))
@@ -204,6 +207,16 @@ function updateActiveNavigation(entries) {
 
 navToggle?.addEventListener('click', toggleNavigation)
 
+mobileLanguage?.addEventListener('toggle', () => {
+  if (mobileLanguage.open) closeNavigation()
+})
+
+document.addEventListener('click', event => {
+  if (mobileLanguage?.open && !mobileLanguage.contains(event.target)) {
+    mobileLanguage.open = false
+  }
+})
+
 navigation?.addEventListener('click', event => {
   if (event.target.closest('a')) closeNavigation()
 })
@@ -213,9 +226,20 @@ window.addEventListener('scroll', () => {
 }, { passive: true })
 
 document.addEventListener('keydown', event => {
+  if (event.key === 'Escape' && mobileLanguage?.open) {
+    mobileLanguage.open = false
+    mobileLanguageSummary?.focus()
+  }
+
   if (event.key === 'Escape' && navigation?.classList.contains('is-open')) {
     closeNavigation()
     navToggle?.focus()
+  }
+
+  if (event.key === 'Escape' && dialog?.open) {
+    event.preventDefault()
+    closeDialog()
+    return
   }
 
   if (!dialog?.open) return

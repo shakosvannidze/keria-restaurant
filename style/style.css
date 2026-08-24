@@ -313,6 +313,74 @@ h2 {
   object-fit: contain;
 }
 
+.mobile-language {
+  position: relative;
+  flex: 0 0 auto;
+  margin-left: auto;
+  margin-right: 0.55rem;
+}
+
+.mobile-language summary {
+  min-width: 4rem;
+  min-height: 2.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.38rem;
+  padding: 0.55rem 0.65rem;
+  border: 1px solid rgb(255 255 255 / 38%);
+  border-radius: 999px;
+  background: rgb(21 19 15 / 92%);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  list-style: none;
+  cursor: pointer;
+}
+
+.mobile-language summary::-webkit-details-marker {
+  display: none;
+}
+
+.mobile-language[open] summary {
+  border-color: var(--gold-light);
+  background: var(--dark-soft);
+}
+
+.mobile-language-menu {
+  position: absolute;
+  z-index: 2;
+  top: calc(100% + 0.55rem);
+  right: 0;
+  width: 11rem;
+  display: grid;
+  gap: 0.2rem;
+  padding: 0.4rem;
+  border: 1px solid rgb(226 191 134 / 36%);
+  border-radius: var(--radius-medium);
+  background: rgb(21 19 15 / 99%);
+  box-shadow: 0 18px 45px rgb(0 0 0 / 34%);
+}
+
+.mobile-language-menu a {
+  min-height: 2.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding-inline: 0.8rem;
+  border-radius: var(--radius-small);
+  color: rgb(255 255 255 / 76%);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.mobile-language-menu a[aria-current="page"] {
+  background: var(--gold-light);
+  color: var(--dark);
+}
+
 .nav-toggle {
   width: 3.1rem;
   height: 3.1rem;
@@ -405,6 +473,10 @@ h2 {
   border: 1px solid rgb(255 255 255 / 14%);
   border-radius: 999px;
   background: rgb(255 255 255 / 6%);
+}
+
+.primary-nav .language-switcher {
+  display: none;
 }
 
 .primary-nav .language-option,
@@ -1376,8 +1448,9 @@ h2 {
 
   .facts div {
     display: grid;
-    grid-template-columns: 8rem 1fr;
+    grid-template-columns: minmax(9.5rem, 0.75fr) minmax(0, 1fr);
     align-items: baseline;
+    gap: 1rem;
   }
 
   .footer-layout {
@@ -1468,6 +1541,10 @@ h2 {
 }
 
 @media (min-width: 75rem) {
+  .mobile-language {
+    display: none;
+  }
+
   .nav-toggle {
     display: none;
   }
@@ -1502,6 +1579,10 @@ h2 {
     flex: 0 0 auto;
     align-self: center;
     margin: 0 0 0 0.55rem;
+  }
+
+  .primary-nav .language-switcher {
+    display: grid;
   }
 
   .primary-nav .language-option {
