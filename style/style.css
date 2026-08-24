@@ -28,6 +28,11 @@
   --shadow-button: 0 10px 24px rgb(32 22 9 / 14%);
 }
 
+html[lang="ru"] {
+  --heading: "Noto Serif", Georgia, serif;
+  --body: "Noto Sans", "Segoe UI", Arial, sans-serif;
+}
+
 *,
 *::before,
 *::after {

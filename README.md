@@ -7,6 +7,8 @@ Official website designed and developed for Keria Restaurant as a project-based 
 ## Key features
 
 - Responsive layouts for mobile, tablet, and desktop screens
+- Georgian, English, and Russian routes with an accessible language selector
+- Localized metadata, structured data, and `hreflang` links
 - Accessible mobile navigation with clear focus states
 - Interactive viewer for all 16 complete menu pages
 - Previous, next, numbered-page, and mobile page-selection controls
@@ -36,6 +38,8 @@ keria-restaurant/
 |   |-- keria-images/
 |   |-- logo/
 |   `-- menu/
+|-- en/                  # English website and menu fallback
+|-- ru/                  # Russian website and menu fallback
 |-- js/
 |   |-- boot.js
 |   `-- script.js
@@ -70,4 +74,3 @@ The Keria Restaurant name, logo, branding, and menu artwork belong to Keria Rest
 ## Author
 
 Website design and development by [Shako Svanidze](https://github.com/shakosvannidze).
-
