@@ -15,4 +15,4 @@ Thumbs.db
 # Dependencies and generated output
 node_modules/
 dist/
-
+.wrangler/

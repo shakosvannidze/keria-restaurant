@@ -1,0 +1,24 @@
+# Repository and deployment configuration
+.git
+.git/**
+.gitignore
+.gitattributes
+.assetsignore
+wrangler.jsonc
+
+# Documentation and local planning
+README.md
+requirements.md
+DEVELOPMENT-NOTES.md
+
+# Local tooling and generated artifacts
+node_modules
+node_modules/**
+.wrangler
+.wrangler/**
+.vscode
+.idea
+.DS_Store
+Thumbs.db
+*.log
+*-preview-*.png
