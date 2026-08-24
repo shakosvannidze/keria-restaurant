@@ -33,11 +33,6 @@
       sizes="180x180"
       href="../images/logo/apple-touch-icon.png">
     <link rel="manifest" href="../site.webmanifest">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Noto+Serif:wght@500;600;700&display=swap"
-      rel="stylesheet">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="ru_RU">
     <meta property="og:locale:alternate" content="ka_GE">
@@ -46,14 +41,14 @@
     <meta property="og:title" content="Меню ресторана «Керия» | Гори">
     <meta property="og:description" content="Полное 16-страничное меню ресторана «Керия».">
     <meta property="og:url" content="https://keriagori.ge/ru/menu">
-    <meta property="og:image" content="https://keriagori.ge/images/social/og-image.png">
-    <meta property="og:image:width" content="1731">
-    <meta property="og:image:height" content="909">
+    <meta property="og:image" content="https://keriagori.ge/images/social/og-image-1200x630.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Логотип и здание ресторана «Керия» вечером">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Меню ресторана «Керия» | Гори">
     <meta name="twitter:description" content="Полное 16-страничное меню ресторана «Керия».">
-    <meta name="twitter:image" content="https://keriagori.ge/images/social/og-image.png">
+    <meta name="twitter:image" content="https://keriagori.ge/images/social/og-image-1200x630.jpg">
     <meta name="twitter:image:alt" content="Логотип и здание ресторана «Керия» вечером">
     <link rel="stylesheet" href="../style/style.css">
   </head>
@@ -127,11 +122,17 @@
             >
           </div>
         </div>
-        <img
-          src="../images/logo/keria-logo.png"
-          width="2048"
-          height="768"
-          alt="Керия">
+        <picture>
+          <source
+            srcset="../images/logo/keria-logo-256.webp 256w, ../images/logo/keria-logo-512.webp 512w"
+            sizes="10rem"
+            type="image/webp">
+          <img
+            src="../images/logo/keria-logo.png"
+            width="2048"
+            height="768"
+            alt="Керия">
+        </picture>
         <p class="label">16 страниц</p>
         <h1>Меню</h1>
       </div>

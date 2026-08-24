@@ -33,11 +33,6 @@
       rel="apple-touch-icon"
       sizes="180x180"
       href="../images/logo/apple-touch-icon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Noto+Serif:wght@500;600;700&display=swap"
-      rel="stylesheet">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="ru_RU">
     <meta property="og:locale:alternate" content="ka_GE">
@@ -50,13 +45,13 @@
     <meta property="og:url" content="https://keriagori.ge/ru/">
     <meta
       property="og:image"
-      content="https://keriagori.ge/images/social/og-image.png">
+      content="https://keriagori.ge/images/social/og-image-1200x630.jpg">
     <meta
       property="og:image:secure_url"
-      content="https://keriagori.ge/images/social/og-image.png">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="1731">
-    <meta property="og:image:height" content="909">
+      content="https://keriagori.ge/images/social/og-image-1200x630.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta
       property="og:image:alt"
       content="Логотип и здание ресторана «Керия» вечером">
@@ -67,12 +62,12 @@
       content="Полное меню, фотографии, услуги, контактная информация и маршрут до ресторана «Керия» в Гори.">
     <meta
       name="twitter:image"
-      content="https://keriagori.ge/images/social/og-image.png">
+      content="https://keriagori.ge/images/social/og-image-1200x630.jpg">
     <meta
       name="twitter:image:alt"
       content="Логотип и здание ресторана «Керия» вечером">
     <link rel="stylesheet" href="../style/style.css">
-    <script src="../js/boot.js"></script>
+    <script>document.documentElement.classList.add('js')</script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -108,12 +103,19 @@
     <a class="skip-link" href="#main">Перейти к основному содержанию</a>
     <header class="site-header" data-header>
       <div class="container header-inner">
-        <a class="brand" href="#top" aria-label="Керия — главная"
-          ><img
-            src="../images/logo/keria-logo.png"
-            width="2048"
-            height="768"
-            alt="Керия"></a>
+        <a class="brand" href="#top" aria-label="Керия — главная">
+          <picture>
+            <source
+              srcset="../images/logo/keria-logo-256.webp 256w, ../images/logo/keria-logo-512.webp 512w"
+              sizes="(min-width: 62rem) 8.75rem, 7.75rem"
+              type="image/webp">
+            <img
+              src="../images/logo/keria-logo.png"
+              width="2048"
+              height="768"
+              alt="Керия">
+          </picture>
+        </a>
         <details class="mobile-language">
           <summary aria-label="Выбор языка">
             <svg
@@ -268,13 +270,19 @@
 
     <main id="main">
       <section class="hero" id="top" aria-labelledby="hero-title">
-        <img
-          class="hero-image"
-          src="../images/keria-images/keria-restaurant-exterior-evening.jpeg"
-          width="2048"
-          height="1072"
-          alt="Здание и сад ресторана «Керия» вечером"
-          fetchpriority="high">
+        <picture class="hero-picture">
+          <source
+            srcset="../images/keria-images/keria-restaurant-exterior-evening-640.webp 640w, ../images/keria-images/keria-restaurant-exterior-evening-768.webp 768w, ../images/keria-images/keria-restaurant-exterior-evening-1280.webp 1280w, ../images/keria-images/keria-restaurant-exterior-evening-2048.webp 2048w"
+            sizes="100vw"
+            type="image/webp">
+          <img
+            class="hero-image"
+            src="../images/keria-images/keria-restaurant-exterior-evening.jpeg"
+            width="2048"
+            height="1072"
+            alt="Здание и сад ресторана «Керия» вечером"
+            fetchpriority="high">
+        </picture>
         <div class="hero-overlay" aria-hidden="true"></div>
         <div class="container hero-content" data-reveal>
           <p class="label">Гори, Хидистави</p>
@@ -310,13 +318,19 @@
             </dl>
           </div>
           <figure class="framed-image portrait">
-            <img
-              src="../images/keria-images/keria-chef-with-khachapuri.jpeg"
-              width="1511"
-              height="2048"
-              loading="lazy"
-              decoding="async"
-              alt="Повар ресторана «Керия» с хачапури">
+            <picture>
+              <source
+                srcset="../images/keria-images/keria-chef-with-khachapuri-480.webp 480w, ../images/keria-images/keria-chef-with-khachapuri-960.webp 960w"
+                sizes="(min-width: 48rem) 45vw, calc(100vw - 2rem)"
+                type="image/webp">
+              <img
+                src="../images/keria-images/keria-chef-with-khachapuri.jpeg"
+                width="1511"
+                height="2048"
+                loading="lazy"
+                decoding="async"
+                alt="Повар ресторана «Керия» с хачапури">
+            </picture>
           </figure>
         </div>
       </section>
@@ -391,13 +405,19 @@
           </div>
           <div class="gallery-grid">
             <figure class="gallery-feature">
-              <img
-                src="../images/keria-images/keria-garden-gazebo.jpeg"
-                width="2048"
-                height="1536"
-                loading="lazy"
-                decoding="async"
-                alt="Сад и декоративная беседка ресторана «Керия»">
+              <picture>
+                <source
+                  srcset="../images/keria-images/keria-garden-gazebo-768.webp 768w, ../images/keria-images/keria-garden-gazebo-1366.webp 1366w"
+                  sizes="(min-width: 75rem) 72rem, calc(100vw - 2rem)"
+                  type="image/webp">
+                <img
+                  src="../images/keria-images/keria-garden-gazebo.jpeg"
+                  width="2048"
+                  height="1536"
+                  loading="lazy"
+                  decoding="async"
+                  alt="Сад и декоративная беседка ресторана «Керия»">
+              </picture>
             </figure>
             <figure class="gallery-detail-a">
               <img
@@ -535,11 +555,17 @@
     <footer class="site-footer">
       <div class="container footer-layout">
         <div>
-          <img
-            src="../images/logo/keria-logo.png"
-            width="2048"
-            height="768"
-            alt="Керия">
+          <picture>
+            <source
+              srcset="../images/logo/keria-logo-256.webp 256w, ../images/logo/keria-logo-512.webp 512w"
+              sizes="9rem"
+              type="image/webp">
+            <img
+              src="../images/logo/keria-logo.png"
+              width="2048"
+              height="768"
+              alt="Керия">
+          </picture>
           <p>Keria Restaurant</p>
         </div>
         <nav aria-label="Навигация в подвале">

@@ -27,7 +27,7 @@ Official website designed and developed for Keria Restaurant as a project-based 
 - Modern CSS3
 - Vanilla JavaScript
 - JSON-LD structured data
-- Google Fonts
+- Self-hosted Noto font families with Georgian, Latin, and Cyrillic subsets
 
 The website is dependency-light and requires no JavaScript framework or build process.
 
@@ -40,10 +40,10 @@ keria-restaurant/
 |   |-- logo/
 |   |-- menu/
 |   `-- social/
+|-- fonts/               # Self-hosted WOFF2 subsets and OFL licenses
 |-- en/                  # English website and menu fallback
 |-- ru/                  # Russian website and menu fallback
 |-- js/
-|   |-- boot.js
 |   `-- script.js
 |-- style/
 |   `-- style.css

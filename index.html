@@ -17,9 +17,6 @@
   <link rel="icon" type="image/png" sizes="48x48" href="images/logo/favicon-48x48.png">
   <link rel="apple-touch-icon" sizes="180x180" href="images/logo/apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;500;600;700&family=Noto+Serif+Georgian:wght@500;600;700&display=swap" rel="stylesheet">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ka_GE">
   <meta property="og:locale:alternate" content="en_GB">
@@ -28,19 +25,19 @@
   <meta property="og:title" content="რესტორანი „კერია“ გორში | ხიდისთავი">
   <meta property="og:description" content="სრული მენიუ, ფოტოები, სერვისები, საკონტაქტო ინფორმაცია და მარშრუტი რესტორან „კერიამდე“.">
   <meta property="og:url" content="https://keriagori.ge/">
-  <meta property="og:image" content="https://keriagori.ge/images/social/og-image.png">
-  <meta property="og:image:secure_url" content="https://keriagori.ge/images/social/og-image.png">
-  <meta property="og:image:type" content="image/png">
-  <meta property="og:image:width" content="1731">
-  <meta property="og:image:height" content="909">
+  <meta property="og:image" content="https://keriagori.ge/images/social/og-image-1200x630.jpg">
+  <meta property="og:image:secure_url" content="https://keriagori.ge/images/social/og-image-1200x630.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="რესტორან „კერიას“ ლოგო და შენობა საღამოს">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="რესტორანი „კერია“ გორში | ხიდისთავი">
   <meta name="twitter:description" content="სრული მენიუ, ფოტოები, სერვისები, საკონტაქტო ინფორმაცია და მარშრუტი რესტორან „კერიამდე“.">
-  <meta name="twitter:image" content="https://keriagori.ge/images/social/og-image.png">
+  <meta name="twitter:image" content="https://keriagori.ge/images/social/og-image-1200x630.jpg">
   <meta name="twitter:image:alt" content="რესტორან „კერიას“ ლოგო და შენობა საღამოს">
   <link rel="stylesheet" href="style/style.css">
-  <script src="js/boot.js"></script>
+  <script>document.documentElement.classList.add('js')</script>
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -90,7 +87,7 @@
   <header class="site-header" data-header>
     <div class="container header-inner">
       <a class="brand" href="#top" aria-label="კერია — მთავარი">
-        <img src="images/logo/keria-logo.png" width="2048" height="768" alt="კერია">
+        <picture><source srcset="images/logo/keria-logo-256.webp 256w, images/logo/keria-logo-512.webp 512w" sizes="(min-width: 62rem) 8.75rem, 7.75rem" type="image/webp"><img src="images/logo/keria-logo.png" width="2048" height="768" alt="კერია"></picture>
       </a>
       <details class="mobile-language">
         <summary aria-label="ენის არჩევა">
@@ -148,7 +145,10 @@
 
   <main id="main">
     <section class="hero" id="top" aria-labelledby="hero-title">
-      <img class="hero-image" src="images/keria-images/keria-restaurant-exterior-evening.jpeg" width="2048" height="1072" alt="რესტორან „კერიას“ შენობა და ეზო საღამოს" fetchpriority="high">
+      <picture class="hero-picture">
+        <source srcset="images/keria-images/keria-restaurant-exterior-evening-640.webp 640w, images/keria-images/keria-restaurant-exterior-evening-768.webp 768w, images/keria-images/keria-restaurant-exterior-evening-1280.webp 1280w, images/keria-images/keria-restaurant-exterior-evening-2048.webp 2048w" sizes="100vw" type="image/webp">
+        <img class="hero-image" src="images/keria-images/keria-restaurant-exterior-evening.jpeg" width="2048" height="1072" alt="რესტორან „კერიას“ შენობა და ეზო საღამოს" fetchpriority="high">
+      </picture>
       <div class="hero-overlay" aria-hidden="true"></div>
       <div class="container hero-content" data-reveal>
         <p class="label">გორი, ხიდისთავი</p>
@@ -175,7 +175,7 @@
           </dl>
         </div>
         <figure class="framed-image portrait">
-          <img src="images/keria-images/keria-chef-with-khachapuri.jpeg" width="1511" height="2048" loading="lazy" decoding="async" alt="რესტორან „კერიას“ მზარეული კერძით">
+          <picture><source srcset="images/keria-images/keria-chef-with-khachapuri-480.webp 480w, images/keria-images/keria-chef-with-khachapuri-960.webp 960w" sizes="(min-width: 48rem) 45vw, calc(100vw - 2rem)" type="image/webp"><img src="images/keria-images/keria-chef-with-khachapuri.jpeg" width="1511" height="2048" loading="lazy" decoding="async" alt="რესტორან „კერიას“ მზარეული კერძით"></picture>
         </figure>
       </div>
     </section>
@@ -218,7 +218,7 @@
           <p>რესტორნის, ეზოსა და კერძების ფოტოები.</p>
         </div>
         <div class="gallery-grid">
-          <figure class="gallery-feature"><img src="images/keria-images/keria-garden-gazebo.jpeg" width="2048" height="1536" loading="lazy" decoding="async" alt="რესტორან „კერიას“ ეზო"></figure>
+          <figure class="gallery-feature"><picture><source srcset="images/keria-images/keria-garden-gazebo-768.webp 768w, images/keria-images/keria-garden-gazebo-1366.webp 1366w" sizes="(min-width: 75rem) 72rem, calc(100vw - 2rem)" type="image/webp"><img src="images/keria-images/keria-garden-gazebo.jpeg" width="2048" height="1536" loading="lazy" decoding="async" alt="რესტორან „კერიას“ ეზო"></picture></figure>
           <figure class="gallery-detail-a"><img src="images/keria-images/keria-chicken-salad-01.jpeg" width="1920" height="1280" loading="lazy" decoding="async" alt="კერძი რესტორან „კერიაში“"></figure>
           <figure class="gallery-detail-b"><img src="images/keria-images/keria-cheese-khachapuri-slice.jpeg" width="1920" height="1323" loading="lazy" decoding="async" alt="ხაჭაპური რესტორან „კერიაში“"></figure>
           <figure class="gallery-portrait"><img src="images/keria-images/keria-roasted-meat-platter.jpeg" width="1536" height="2048" loading="lazy" decoding="async" alt="კერძი რესტორან „კერიაში“"></figure>
@@ -255,7 +255,7 @@
 
   <footer class="site-footer">
     <div class="container footer-layout">
-      <div><img src="images/logo/keria-logo.png" width="2048" height="768" alt="კერია"><p>Keria Restaurant</p></div>
+      <div><picture><source srcset="images/logo/keria-logo-256.webp 256w, images/logo/keria-logo-512.webp 512w" sizes="9rem" type="image/webp"><img src="images/logo/keria-logo.png" width="2048" height="768" alt="კერია"></picture><p>Keria Restaurant</p></div>
       <nav aria-label="ქვედა ნავიგაცია"><a href="#about">ჩვენ შესახებ</a><a href="#menu">მენიუ</a><a href="#gallery">გალერეა</a><a href="#location">ლოკაცია</a></nav>
       <address>
         <a href="tel:+995595748383">+995 595 74 83 83</a>
