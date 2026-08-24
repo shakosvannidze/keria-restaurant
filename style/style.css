@@ -1039,7 +1039,9 @@ h2 {
 }
 
 .gallery-feature,
-.gallery-exterior {
+.gallery-exterior,
+.gallery-interior,
+.gallery-table {
   aspect-ratio: 4 / 3;
 }
 
@@ -1477,7 +1479,11 @@ h2 {
       "detail-c detail-d"
       "detail-e detail-e"
       "exterior exterior"
-      "exterior exterior";
+      "exterior exterior"
+      "interior interior"
+      "interior interior"
+      "table table"
+      "table table";
     grid-auto-rows: clamp(9rem, 24vw, 13rem);
   }
 
@@ -1493,6 +1499,8 @@ h2 {
   .gallery-detail-d { grid-area: detail-d; }
   .gallery-exterior { grid-area: exterior; }
   .gallery-detail-e { grid-area: detail-e; }
+  .gallery-interior { grid-area: interior; }
+  .gallery-table { grid-area: table; }
 }
 
 @media (min-width: 48rem) {
@@ -1625,7 +1633,9 @@ h2 {
       "feature feature detail-a portrait"
       "feature feature detail-b portrait"
       "detail-c detail-d exterior exterior"
-      "detail-e detail-e exterior exterior";
+      "detail-e detail-e exterior exterior"
+      "interior interior table table"
+      "interior interior table table";
     grid-auto-rows: clamp(10.5rem, 13vw, 14.5rem);
   }
 }
