@@ -1,8 +1,11 @@
 {
   "name": "რესტორანი „კერია“",
   "short_name": "კერია",
+  "description": "რესტორან „კერიას“ მენიუ, ფოტოები, სერვისები და საკონტაქტო ინფორმაცია.",
   "lang": "ka",
-  "start_url": "./",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#f6f0e5",
   "theme_color": "#15130f",

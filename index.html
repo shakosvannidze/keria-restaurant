@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>რესტორანი „კერია“ — გორი, ხიდისთავი | Keria Restaurant</title>
-  <meta name="description" content="რესტორანი „კერია“ გორში, ხიდისთავში — მენიუ, ფოტოები, მდებარეობა და საკონტაქტო ინფორმაცია.">
+  <title>რესტორანი „კერია“ გორში | ხიდისთავი</title>
+  <meta name="description" content="რესტორანი „კერია“ გორში, ხიდისთავში — დაათვალიერეთ სრული მენიუ და ფოტოები, გაეცანით სერვისებს, დაგვიკავშირდით ან გახსენით მარშრუტი.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#15130f">
   <link rel="canonical" href="https://keriagori.ge/">
@@ -22,9 +22,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;500;600;700&family=Noto+Serif+Georgian:wght@500;600;700&display=swap" rel="stylesheet">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ka_GE">
+  <meta property="og:locale:alternate" content="en_GB">
+  <meta property="og:locale:alternate" content="ru_RU">
   <meta property="og:site_name" content="რესტორანი კერია">
-  <meta property="og:title" content="რესტორანი „კერია“ — გორი, ხიდისთავი">
-  <meta property="og:description" content="მენიუ, ფოტოები და საკონტაქტო ინფორმაცია.">
+  <meta property="og:title" content="რესტორანი „კერია“ გორში | ხიდისთავი">
+  <meta property="og:description" content="სრული მენიუ, ფოტოები, სერვისები, საკონტაქტო ინფორმაცია და მარშრუტი რესტორან „კერიამდე“.">
   <meta property="og:url" content="https://keriagori.ge/">
   <meta property="og:image" content="https://keriagori.ge/images/social/og-image.png">
   <meta property="og:image:secure_url" content="https://keriagori.ge/images/social/og-image.png">
@@ -33,8 +35,8 @@
   <meta property="og:image:height" content="909">
   <meta property="og:image:alt" content="რესტორან „კერიას“ ლოგო და შენობა საღამოს">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="რესტორანი „კერია“ — გორი, ხიდისთავი">
-  <meta name="twitter:description" content="მენიუ, ფოტოები და საკონტაქტო ინფორმაცია.">
+  <meta name="twitter:title" content="რესტორანი „კერია“ გორში | ხიდისთავი">
+  <meta name="twitter:description" content="სრული მენიუ, ფოტოები, სერვისები, საკონტაქტო ინფორმაცია და მარშრუტი რესტორან „კერიამდე“.">
   <meta name="twitter:image" content="https://keriagori.ge/images/social/og-image.png">
   <meta name="twitter:image:alt" content="რესტორან „კერიას“ ლოგო და შენობა საღამოს">
   <link rel="stylesheet" href="style/style.css">
@@ -42,22 +44,42 @@
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Restaurant",
-      "name": "რესტორანი კერია",
-      "alternateName": "Keria Restaurant",
-      "url": "https://keriagori.ge/",
-      "logo": "https://keriagori.ge/images/logo/keria-logo.png",
-      "image": "https://keriagori.ge/images/keria-images/keria-restaurant-exterior-evening.jpeg",
-      "menu": "https://keriagori.ge/menu.html",
-      "telephone": "+995595748383",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Khidistavi",
-        "addressRegion": "Gori",
-        "addressCountry": "GE"
-      },
-      "hasMap": "https://www.google.com/maps/search/?api=1&query=X47G%2BG7%20Khidistavi%2C%20Georgia",
-      "sameAs": ["https://m.facebook.com/100066701161686/"]
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://keriagori.ge/#website",
+          "url": "https://keriagori.ge/",
+          "name": "რესტორანი კერია",
+          "alternateName": ["Keria Restaurant", "Ресторан Керия"],
+          "inLanguage": ["ka", "en", "ru"]
+        },
+        {
+          "@type": "Restaurant",
+          "@id": "https://keriagori.ge/#restaurant",
+          "name": "რესტორანი კერია",
+          "alternateName": ["Keria Restaurant", "Ресторан Керия"],
+          "description": "რესტორანი „კერია“ გორში, ხიდისთავში — მენიუ, ფოტოები, სერვისები და საკონტაქტო ინფორმაცია.",
+          "url": "https://keriagori.ge/",
+          "mainEntityOfPage": "https://keriagori.ge/",
+          "logo": "https://keriagori.ge/images/logo/keria-logo.png",
+          "image": [
+            "https://keriagori.ge/images/keria-images/keria-restaurant-exterior-evening.jpeg",
+            "https://keriagori.ge/images/keria-images/keria-restaurant-exterior-garden.jpeg",
+            "https://keriagori.ge/images/keria-images/keria-dining-hall-heart-decor.jpeg"
+          ],
+          "menu": "https://keriagori.ge/menu.html",
+          "servesCuisine": "ქართული სამზარეულო",
+          "telephone": "+995595748383",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Khidistavi",
+            "addressRegion": "Gori",
+            "addressCountry": "GE"
+          },
+          "hasMap": "https://www.google.com/maps/search/?api=1&query=X47G%2BG7%20Khidistavi%2C%20Georgia",
+          "sameAs": ["https://m.facebook.com/100066701161686/"]
+        }
+      ]
     }
   </script>
   <script src="js/script.js" defer></script>
@@ -145,7 +167,7 @@
           <p class="label label-dark">რესტორანი „კერია“</p>
           <h2 id="about-title">ჩვენ შესახებ</h2>
           <p class="about-description">
-            „კერია“ რესტორანია, სადაც შეგიძლიათ სასიამოვნო გარემოში გაატაროთ დრო და ჩვენი მენიუდან სასურველი კერძები დააგემოვნოთ. ჩვენი მთავარი მიზანია, თითოეულ სტუმარს ყურადღებით მოვემსახუროთ და გატარებული დრო სასიამოვნო გამოცდილებად ვაქციოთ.
+            „კერია“ რესტორანია გორში, ხიდისთავში, სადაც შეგიძლიათ სასიამოვნო გარემოში გაატაროთ დრო და ჩვენი მენიუდან სასურველი კერძები დააგემოვნოთ. ჩვენი მთავარი მიზანია, თითოეულ სტუმარს ყურადღებით მოვემსახუროთ და გატარებული დრო სასიამოვნო გამოცდილებად ვაქციოთ.
           </p>
           <dl class="facts">
             <div><dt>მდებარეობა</dt><dd>გორი, ხიდისთავი</dd></div>
@@ -204,8 +226,8 @@
           <figure class="gallery-detail-d"><img src="images/keria-images/keria-red-caviar-platter.jpeg" width="2048" height="1365" loading="lazy" decoding="async" alt="წითელი ხიზილალის კერძი რესტორან „კერიაში“"></figure>
           <figure class="gallery-exterior"><img src="images/keria-images/keria-restaurant-exterior-sunset.jpeg" width="1170" height="861" loading="lazy" decoding="async" alt="რესტორან „კერიას“ შენობა"></figure>
           <figure class="gallery-detail-e"><img src="images/keria-images/keria-grilled-fish-platter-01.jpeg" width="960" height="649" loading="lazy" decoding="async" alt="შემწვარი თევზის კერძი რესტორან „კერიაში“"></figure>
-          <figure class="gallery-interior"><img src="images/keria-images/keria-dining-hall-heart-decor.jpeg" width="5712" height="4284" loading="lazy" decoding="async" alt="გულებით გაფორმებული დარბაზი და გაწყობილი სუფრები რესტორან „კერიაში“"></figure>
-          <figure class="gallery-table"><img src="images/keria-images/keria-dining-hall-floral-table-setting.jpeg" width="5712" height="4284" loading="lazy" decoding="async" alt="ყვავილებით გაფორმებული საბანკეტო სუფრა რესტორან „კერიაში“"></figure>
+          <figure class="gallery-interior"><picture><source srcset="images/keria-images/keria-dining-hall-heart-decor-optimized.webp" type="image/webp"><img src="images/keria-images/keria-dining-hall-heart-decor.jpeg" width="5712" height="4284" loading="lazy" decoding="async" alt="გულებით გაფორმებული დარბაზი და გაწყობილი სუფრები რესტორან „კერიაში“"></picture></figure>
+          <figure class="gallery-table"><picture><source srcset="images/keria-images/keria-dining-hall-floral-table-setting-optimized.webp" type="image/webp"><img src="images/keria-images/keria-dining-hall-floral-table-setting.jpeg" width="5712" height="4284" loading="lazy" decoding="async" alt="ყვავილებით გაფორმებული საბანკეტო სუფრა რესტორან „კერიაში“"></picture></figure>
         </div>
       </div>
     </section>
@@ -224,7 +246,6 @@
             <a class="button light" href="tel:+995595748383">დარეკვა</a>
           </div>
         </div>
-        <!-- TODO: ზუსტი Google Maps embed/share URL-ის მიღების შემდეგ ფოტო ჩაანაცვლეთ გადამოწმებული რუკით. -->
         <figure class="visit-visual">
           <img src="images/keria-images/keria-restaurant-exterior-garden.jpeg" width="1170" height="864" loading="lazy" decoding="async" alt="რესტორან „კერიას“ ეზო და შენობა">
         </figure>
@@ -259,7 +280,7 @@
         </button>
       </header>
       <div class="dialog-stage">
-        <div class="active-page"><img width="628" height="903" alt="რესტორან „კერიას“ მენიუ — ცივი კერძები, გვერდი 1" data-menu-image></div>
+        <div class="active-page"><img src="images/menu/menu-01-civi-kerdzebi.jpeg" width="628" height="903" alt="რესტორან „კერიას“ მენიუ — ცივი კერძები, გვერდი 1" data-menu-image></div>
       </div>
       <footer class="dialog-footer">
         <div class="dialog-navigation">
@@ -273,7 +294,7 @@
             <span aria-hidden="true">→</span>
           </button>
         </div>
-        <div class="page-controls" aria-label="მენიუს გვერდები">
+        <div class="page-controls" role="group" aria-label="მენიუს გვერდები">
               <button type="button" data-page="0" aria-label="მენიუს გვერდი 1">1</button>
               <button type="button" data-page="1" aria-label="მენიუს გვერდი 2">2</button>
               <button type="button" data-page="2" aria-label="მენიუს გვერდი 3">3</button>

@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://keriagori.ge/</loc></url>
-  <url><loc>https://keriagori.ge/en/</loc></url>
-  <url><loc>https://keriagori.ge/ru/</loc></url>
+  <url>
+    <loc>https://keriagori.ge/</loc>
+    <lastmod>2026-08-24</lastmod>
+  </url>
+  <url>
+    <loc>https://keriagori.ge/en/</loc>
+    <lastmod>2026-08-24</lastmod>
+  </url>
+  <url>
+    <loc>https://keriagori.ge/ru/</loc>
+    <lastmod>2026-08-24</lastmod>
+  </url>
+  <url>
+    <loc>https://keriagori.ge/menu.html</loc>
+    <lastmod>2026-08-24</lastmod>
+  </url>
+  <url>
+    <loc>https://keriagori.ge/en/menu.html</loc>
+    <lastmod>2026-08-24</lastmod>
+  </url>
+  <url>
+    <loc>https://keriagori.ge/ru/menu.html</loc>
+    <lastmod>2026-08-24</lastmod>
+  </url>
 </urlset>
