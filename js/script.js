@@ -26,24 +26,38 @@ const pageFiles = [
   'menu-16-alkoholuri-sasmelebi.jpeg'
 ]
 
-const pageLabels = [
-  'ცივი კერძები',
-  'ცივი კერძები',
-  'სალათები',
-  'ხინკალი',
-  'ცომეული',
-  'ცომეული',
-  'ცხელი კერძები',
-  'ცხელი კერძები',
-  'ცხელი კერძები',
-  'თევზის კერძები',
-  'ხორცის კერძები',
-  'გარნირი და დესერტი',
-  'სოუსები',
-  'დესერტები',
-  'უალკოჰოლო სასმელები',
-  'ალკოჰოლური სასმელები'
-]
+const translations = {
+  ka: {
+    menuOpen: 'მენიუს გახსნა',
+    menuClose: 'მენიუს დახურვა',
+    menuImagePrefix: 'რესტორან „კერიას“ მენიუ',
+    pageWord: 'გვერდი',
+    pageLabels: [
+      'ცივი კერძები', 'ცივი კერძები', 'სალათები', 'ხინკალი',
+      'ცომეული', 'ცომეული', 'ცხელი კერძები', 'ცხელი კერძები',
+      'ცხელი კერძები', 'თევზის კერძები', 'ხორცის კერძები',
+      'გარნირი და დესერტი', 'სოუსები', 'დესერტები',
+      'უალკოჰოლო სასმელები', 'ალკოჰოლური სასმელები'
+    ]
+  },
+  en: {
+    menuOpen: 'Open navigation',
+    menuClose: 'Close navigation',
+    menuImagePrefix: 'Keria Restaurant menu',
+    pageWord: 'page',
+    pageLabels: [
+      'Cold dishes', 'Cold dishes', 'Salads', 'Khinkali',
+      'Dough dishes', 'Dough dishes', 'Hot dishes', 'Hot dishes',
+      'Hot dishes', 'Fish dishes', 'Meat dishes',
+      'Side dishes and dessert', 'Sauces', 'Desserts',
+      'Non-alcoholic drinks', 'Alcoholic drinks'
+    ]
+  }
+}
+
+const language = document.documentElement.lang.split('-')[0]
+const copy = translations[language] || translations.ka
+const assetRoot = document.body.dataset.assetRoot || ''
 
 const header = document.querySelector('[data-header]')
 const navToggle = document.querySelector('.nav-toggle')
@@ -65,7 +79,7 @@ const revealGroups = [...document.querySelectorAll('[data-reveal]')]
 let activePage = 0
 
 function getPagePath(index) {
-  return `images/menu/${pageFiles[index]}`
+  return `${assetRoot}images/menu/${pageFiles[index]}`
 }
 
 function closeNavigation() {
@@ -74,7 +88,7 @@ function closeNavigation() {
   navigation.classList.remove('is-open')
   header?.classList.remove('menu-open')
   navToggle.setAttribute('aria-expanded', 'false')
-  navToggle.querySelector('.sr-only').textContent = 'მენიუს გახსნა'
+  navToggle.querySelector('.sr-only').textContent = copy.menuOpen
 }
 
 function toggleNavigation() {
@@ -85,8 +99,8 @@ function toggleNavigation() {
   header?.classList.toggle('menu-open', isOpening)
   navToggle.setAttribute('aria-expanded', String(isOpening))
   navToggle.querySelector('.sr-only').textContent = isOpening
-    ? 'მენიუს დახურვა'
-    : 'მენიუს გახსნა'
+    ? copy.menuClose
+    : copy.menuOpen
 }
 
 function preloadPage(index) {
@@ -109,7 +123,7 @@ function showPage(index) {
   activeImage.src = pagePath
   activeImage.width = width
   activeImage.height = height
-  activeImage.alt = `რესტორან „კერიას“ მენიუ — ${pageLabels[index]}, გვერდი ${pageNumber}`
+  activeImage.alt = `${copy.menuImagePrefix} — ${copy.pageLabels[index]}, ${copy.pageWord} ${pageNumber}`
   status.textContent = `${pageNumber} / ${pageDimensions.length}`
   previousButton.disabled = index === 0
   nextButton.disabled = index === pageDimensions.length - 1
